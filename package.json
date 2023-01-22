@@ -1,0 +1,24 @@
+{
+  "name": "muet-attendance-middleware",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index.js",
+    "dev": "nodemon ./index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ajax": "^0.0.4",
+    "axios": "^1.2.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "http-proxy": "^1.18.1",
+    "http-proxy-middleware": "^2.0.6",
+    "node-html-parser": "^6.1.4",
+    "nodemon": "^2.0.20",
+    "qs": "^6.11.0",
+    "socket.io": "^4.5.4"
+  }
+}
