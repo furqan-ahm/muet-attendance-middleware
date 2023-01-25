@@ -109,6 +109,11 @@ io.on('connection', (socket) => {
 
                 const tables = parsed.querySelectorAll('table');
 
+
+                const tableDetails = tables[0].querySelectorAll('td');
+                
+                const dated=tableDetails.pop().text;
+
                 const subjectCells = [...tables[3].querySelectorAll('td')].slice(3);
 
                 const studentRows = [...parsed.querySelector('tbody').querySelectorAll('tr')];
@@ -146,6 +151,7 @@ io.on('connection', (socket) => {
 
                 console.log('sending response');
                 socket.emit('response', {
+                    'dated':dated,
                     'subjectNames':subjectsFullName,
                     'subjects': attendanceSubjects,
                     'conducted': classConducted,
